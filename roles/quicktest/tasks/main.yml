@@ -1,18 +1,6 @@
----
-- hosts: all
-  gather_facts: True
-  connection: local
-  user: remote
+- name: Gather facts about all Managed SANs
+  oneview_managed_san_facts:
+    config: "{{ config }}"
+  delegate_to: localhost
 
-  vars:
-    - config: "/opt/variables/oneview_config.json"  
- # environment:
- #   ANSIBLE_LIBRARY: "/usr/lib/python2.7/site-packages/hpOneView/oneview-ansible/library"
- #   PYTHONPATH: "/usr/lib/python2.7/site-packages/hpOneView/oneview-ansible/library"
-  
-  tasks:
-    - name: Gather facts about all Connection Templates
-      oneview_connection_template_facts:
-        config: "{{ config }}"
-      delegate_to: localhost
-
+- debug: var=managed_sans
