@@ -1,6 +1,7 @@
-- name: Gather facts about all Managed SANs
-  oneview_managed_san_facts:
-    config: "{{ config }}"
-  delegate_to: localhost
-
-- debug: var=managed_sans
+  vars:
+    - config: "/opt/variables/oneview_config.json"  
+  tasks:
+    - name: Gather facts about all Connection Templates
+      oneview_connection_template_facts:
+        config: "{{ config }}"
+      delegate_to: localhost
