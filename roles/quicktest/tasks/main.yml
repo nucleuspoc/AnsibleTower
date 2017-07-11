@@ -1,5 +1,3 @@
 - name: Gather facts about all Volumes
   oneview_volume_facts:
-    config: "{{ config }}"
-
 - debug: var=storage_volumes
