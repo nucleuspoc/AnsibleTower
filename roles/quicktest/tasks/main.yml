@@ -14,7 +14,7 @@
 
 - name: Create Private Volume
   oneview_volume:
-    config: "{{ config }}"
+#    config: "{{ config }}"
     state: present
     data:
       name: 'Tower Volume'
