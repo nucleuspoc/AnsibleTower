@@ -1,20 +1,17 @@
 - name: Gather facts about all Storage Pools
   oneview_storage_pool_facts:
-    config: "{{ config }}"
     name: "FC_r5"
 
 - set_fact: Vol_Stor_Pool5_uri="{{ storage_pools[0].uri }}"
 
 - name: Gather facts about all Storage Systems
   oneview_storage_system_facts:
-    config: "{{ config }}"
   delegate_to: localhost
 
 - set_fact: Vol_Stor_Sys_Uri="{{ storage_systems[0].uri }}"
 
 - name: Create Private Volume
   oneview_volume:
-    config: "{{ config }}"
     state: present
     data:
       name: 'Private Volume for OS'
