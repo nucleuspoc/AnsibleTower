@@ -1,4 +1,5 @@
 ---
+
 - name: Create Ethernet network for Tower
   oneview_ethernet_network:
     state: present
