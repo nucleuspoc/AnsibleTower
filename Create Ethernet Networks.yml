@@ -1,0 +1,26 @@
+---
+- name: Create Ethernet network for Tower
+  oneview_ethernet_network:
+    state: present
+    data:
+      name: 'Tower Test 1'
+      vlanId: '201'
+      privateNetwork: false
+      smartLink: false
+      purpose: Management
+      bandwidth:
+          maximumBandwidth: 20000
+          typicalBandwidth: 2500
+
+- name: Create Ethernet network for Tower
+  oneview_ethernet_network:
+    state: present
+    data:
+      name: 'Tower Test 2'
+      vlanId: '202'
+      privateNetwork: false
+      smartLink: false
+      purpose: Management
+      bandwidth:
+          maximumBandwidth: 20000
+          typicalBandwidth: 2500

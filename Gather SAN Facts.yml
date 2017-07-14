@@ -1,0 +1,4 @@
+- name: Gather facts about all Managed SANs
+  oneview_managed_san_facts:
+  delegate_to: localhost
+- debug: var=managed_sans

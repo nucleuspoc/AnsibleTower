@@ -1,0 +1,11 @@
+- name: Ensure that the Ethernet Network is absent
+  oneview_ethernet_network:
+    state: absent
+    data:
+      name: 'Tower Test 1'
+
+- name: Ensure that the Ethernet Network is absent
+  oneview_ethernet_network:
+    state: absent
+    data:
+      name: 'Tower Test 2'
