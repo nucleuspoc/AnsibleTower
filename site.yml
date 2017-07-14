@@ -2,5 +2,5 @@
 - hosts: all
   connection: local
   roles:
-    - {role: Create Ethernet Network}
-    - {role: Create Volume}
+    - {role: Delete Ethernet Network}
+    - {role: Delete Volume}
