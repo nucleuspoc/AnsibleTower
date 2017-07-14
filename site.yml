@@ -1,4 +1,5 @@
 ---
-- roles:
+- hosts: all
+  roles:
     - {role: Create Ethernet Network}
     - {role: Create Volume}
