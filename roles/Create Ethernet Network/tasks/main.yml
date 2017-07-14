@@ -1,13 +1,8 @@
----
-
-- hosts: all
-  connection: local
-
-- name: Create Ethernet network for Tower
+- name: Create Ethernet network for Ansible Tower
   oneview_ethernet_network:
     state: present
     data:
-      name: 'Tower Test 1'
+      name: 'Ansible Tower 1'
       vlanId: '201'
       privateNetwork: false
       smartLink: false
@@ -16,11 +11,11 @@
           maximumBandwidth: 20000
           typicalBandwidth: 2500
 
-- name: Create Ethernet network for Tower
+- name: Create Ethernet network for Ansible Tower
   oneview_ethernet_network:
     state: present
     data:
-      name: 'Tower Test 2'
+      name: 'Ansible Tower 2'
       vlanId: '202'
       privateNetwork: false
       smartLink: false

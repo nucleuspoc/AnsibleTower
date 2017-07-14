@@ -1,0 +1,5 @@
+- name: Delete the volume previously created with a Storage Pool
+  oneview_volume:
+    state: absent
+    data:
+      name: 'Tower Volume'
