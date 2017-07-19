@@ -3,7 +3,7 @@
 #
 - name: Gather facts about FC_r5
   oneview_storage_pool_facts:
-    name: "FC_r5"
+    name: "{{ Vol_Stor_Pool5 }}"
 
 - set_fact: Vol_Stor_Pool5_uri="{{ storage_pools[0].uri }}"
 
